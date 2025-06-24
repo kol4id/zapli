@@ -1,0 +1,25 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+.list{
+    width: 100%;
+    height: calc(100% - 76px);
+    background-color: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $space-x3;
+    padding-top: 15px;
+
+    .smart_list{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nothing{
+        padding: $space-x2 $space-x2;
+        font-size: 26px;
+        color: $surface-buttons-transport-blue;
+    }
+}

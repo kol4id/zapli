@@ -1,0 +1,33 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 76px;
+    background-color: $surface-buttons-transport-blue;
+    border-bottom-left-radius: $borderRadius-x3;
+    border-bottom-right-radius: $borderRadius-x3;
+    padding: $space-x2 $space-x1 12px $space-x2;
+
+    @media(min-width: 1201px){
+        display: none;
+    }
+
+    .buttons{
+        display: flex;
+        gap: $space-x1;
+        
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            border-radius: $space-x2;
+            border: none;
+            background-color: #E8E8F7;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+
+.delivery{
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    padding: $space-x6 $space-x4;
+    font-size: 18px;
+    font-weight: 400;
+    color: $surface-buttons-transport-blue;
+    line-height: 140%;
+    letter-spacing: 0%;
+    gap: $space-x4;
+
+    @media(max-width: 1200px){
+        margin-top: 64px;
+        padding: $space-x4 $space-x2;
+    }
+
+    h5{
+        line-height: 140%;
+        font-size: 28px;
+    }
+
+    .list{
+        display: flex;
+        gap: $space-x8;
+
+        @media(max-width: 1200px){
+            gap: 12px;
+            justify-content: space-between;
+            overflow-y: auto;
+        }
+
+        .card{
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 252px;
+            min-height: 252px;
+            background-color: #E8E8F7;
+
+            @media(max-width: 1366px){
+                min-width: 228px;
+                min-height: 228px;
+            }
+        }
+    }
+}

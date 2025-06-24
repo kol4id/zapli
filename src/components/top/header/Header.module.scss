@@ -1,0 +1,109 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+.header{
+    margin-top: 32px;
+    display: flex;
+    gap: $space-x8;
+    width: 100%;
+    font-size: 18px;
+    color: $surface-buttons-transport-blue;
+    line-height: 140%;
+    letter-spacing: 0%;
+
+    @media(max-width: 1200px){
+        display: none;
+    }
+
+    @media(max-width: 1366px){
+        gap: $space-x4;
+    }
+
+    .logo{
+        border-radius: $space-x3;
+        min-width: 284px;
+        height: 80px;
+        background-color: $surface-buttons-transport-blue;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .search{
+        display: flex;
+        padding: $space-x2;
+        border-radius: $space-x3;
+        width: 948px;
+        height: 80px;
+        background-color: $surface-buttons-transport-blue;
+        justify-content: space-between;
+        gap: $space-x8;
+
+        @media(max-width: 1366px){
+            gap: $space-x4;
+        }
+
+        &_line{
+            flex: 1;
+            background-color: #E8E8F7;
+            display: flex;
+            border-radius: 12px;
+            gap: $space-x3;
+            padding: 0 $space-x2;
+
+            .icon{
+                justify-self: center;
+                align-self: center;
+            }
+
+            input{
+                font-size: 18px;
+                outline: none;
+                border: none;
+                width: 100%;
+                height: 48px;
+                border-radius: 12px;
+                background-color: #E8E8F7;
+                display: flex;
+                color: $surface-buttons-transport-blue;
+                line-height: 140%;
+            }
+
+            .search_input::placeholder{
+                font-weight: 400;
+                font-size: 18px;
+                color: $surface-buttons-transport-blue;
+            }
+        }
+
+        &_buttons{
+            display: flex;
+            gap: $space-x2;
+            width: 284px;
+            height: 48px;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                width: 48px;
+                height: 48px;
+                background-color: #E8E8F7;
+            }
+
+            button{
+                gap: $space-x1;
+                font-size: 18px;
+                color: $surface-buttons-transport-blue;
+                border: none;
+                background-color: #E8E8F7;
+                border-radius: 12px;
+                width: 156px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

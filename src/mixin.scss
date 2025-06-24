@@ -1,0 +1,81 @@
+@use '@/styles.scss' as *;
+
+@mixin center_block{
+    display: flex;
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media(max-width: 1200px){
+        padding: 0 $space-x2;
+    }
+
+    @media(max-width: 390px){
+        padding: 0 $space-x1;
+    }
+}
+
+@mixin title{
+    font-size: 44px;
+    color: $text-primary;
+    line-height: 130%;
+    font-weight: 600;
+
+    @media(max-width: 1200px){
+        font-size: 28px;
+        line-height: 140%;
+    }
+}
+
+@mixin title_small{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    color: $text-primary;
+}
+
+@mixin red_button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 140%;
+    font-size: 18px;
+    color: $text-primary-on-color;
+    border: none;
+    background-color: $surface-buttons-red-primary;
+
+    @media(min-width: 1200px){
+        &:hover{
+            background-color: $surface-buttons-red-hover;
+        }
+
+        &:active{
+            background-color: $surface-buttons-red-active;
+        }
+    } 
+}
+
+@mixin primary_hover{
+    background-color: $surface-buttons-neutral-primary-default;
+
+    @media(min-width: 1200px){
+        &:hover{
+            background-color: $surface-buttons-neutral-primary-hover;
+        }
+
+        &:active{
+            background-color: $surface-buttons-neutral-primary-active;
+        }
+    }
+}
+
+@mixin label_hover{
+    color: $text-primary;
+
+    @media(min-width: 1200px){
+        &:hover{
+            color: $text-secondary;
+        }
+    }
+}

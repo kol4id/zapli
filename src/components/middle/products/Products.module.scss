@@ -1,0 +1,76 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+.products{
+    margin-top: 128px;
+    width: 100%;
+    padding: $space-x6 $space-x4;
+    font-size: 18px;
+    font-weight: 400;
+    color: $surface-buttons-transport-blue;
+    line-height: 140%;
+    letter-spacing: 0%;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 1200px){
+        padding: $space-x4 $space-x2;
+    }
+
+    @media(max-width: 1200px){
+        margin-top: 64px;
+        padding: $space-x4 $space-x2;
+    }
+
+    .title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        h5{
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .buttons{
+            display: flex;
+            gap: $space-x2;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+
+            button{
+                height: 40px;
+                width: 40px;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .list{
+        overflow: hidden;
+        display: flex;
+        gap: 52px;
+        overflow-x: hidden;
+
+        @media(max-width: 1200px){
+            overflow-x: auto;
+            gap: $space-x4;
+        }
+
+        @media(max-width: 900px){
+            gap: $space-x3;
+        }
+
+        @media(max-width: 600px){
+            gap: $space-x2;
+        }
+
+        @media(max-width: 420px){
+            gap: 12px;
+        }
+    }
+}

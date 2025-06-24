@@ -1,0 +1,65 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+.item{
+    display: flex;
+    flex-direction: column;
+    height: 413px;
+    max-width: 252px;
+    min-width: 252px;
+    gap: $space-x2;
+
+    @media(max-width: 1366px){
+        max-width: 228px;
+        min-width: 228px;
+    }
+
+    @media(max-width: 1200px){
+        max-width: 252px;
+        min-width: 252px;
+        height: 413px;
+    }
+
+    &_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 280px;
+        background-color: #E8E8F7;
+        border-radius: $space-x2;
+
+        @media(max-width: 1366px){
+            height: 247px;
+        }
+    }
+
+    &_description{
+        display: flex;
+        flex-direction: column;
+        gap: $space-x05;
+        color: $surface-buttons-transport-blue;
+        line-height: 140%;
+
+        h6{
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+
+        p.title{
+            height: 55px;
+            word-wrap: normal;
+            overflow: hidden;
+            // white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        p.stock{
+            color: #9C9C9C;
+        }
+    }
+}

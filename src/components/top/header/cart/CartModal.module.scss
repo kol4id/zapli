@@ -1,0 +1,22 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 76px;
+    background-color: $surface-buttons-transport-blue;
+    border-bottom-left-radius: $borderRadius-x3;
+    border-bottom-right-radius: $borderRadius-x3;
+    padding: $space-x2 $space-x1 12px $space-x2;
+
+
+    button{
+        cursor: pointer;
+        background-color: #E8E8F7;
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        border: none;
+    }
+}

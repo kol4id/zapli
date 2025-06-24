@@ -1,0 +1,10 @@
+@use '@/mixin.scss' as *;
+@use '@/styles.scss' as *;
+
+
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: $space-x2;
+    width: 100%;
+}
